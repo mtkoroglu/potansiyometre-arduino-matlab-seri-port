@@ -8,7 +8,6 @@ void loop() {
   for (int i = 0; i < 4; i++) {
     kanal[i] = map(analogRead(analogPin[i]), 0, 1023, 0, 255);    
   }
-  Serial.write('h');
-  Serial.write(kanal, 4);
-  delay(20); // her 20ms'de bir yolla yani saniyede 100 kere
+  Serial.write('h'); Serial.write(kanal, 4);
+  delay(20); // her 20ms'de bir yolla yani saniyede 50 kere --> f = 50Hz
 }
